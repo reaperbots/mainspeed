@@ -171,7 +171,7 @@ def get_readable_message():
         globals()['PAGE_NO'] = PAGES
     for download in list(download_dict.values())[STATUS_START:STATUS_LIMIT+STATUS_START]:
         msg += f"<b>📂{escape(f'{download.name()}')}</b>\n"
-        msg += f"<b>👤Task by:%nbbsp;</b><code>{source(download)}</code>\n\n"
+        msg += f"<b>👤Task by:&nbbsp;</b><code>{source(download)}</code>\n\n"
         msg += f"<b>{download.status()}...</b>"
         if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
             msg += f"\n<code>{progress_bar(download.progress())}</code> {download.progress()}"
